@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+}
+
+body {
+  background-color: #a3b18a;
+  text-align: center;
+}
+
+.container {
+  height: 70vh;
+  display: flex;
+
+  justify-content: center;
+  align-items: center;
+}
+
+h1.tic-tac-toe {
+  padding-top: 30px;
+  display: block;
+  font-size: 36px;
+  color: #344e41;
+  text-shadow: 1px 0px 1px #ccc, 0px 1px 1px #eee, 2px 1px 1px #ccc, 1px 2px 1px #eee, 3px 2px 1px #ccc, 2px 3px 1px #eee, 4px 3px 1px #ccc, 3px 4px 1px #eee, 5px 4px 1px #ccc, 4px 5px 1px #eee, 6px 5px 1px #ccc, 5px 6px 1px #eee, 7px 6px 1px #ccc;
+}
+
+.msgbox {
+  background-color: #344e41;
+  max-width: 50vmin;
+  position: absolute;
+  left: 50%;
+  /* right: 50%; */
+  transform: translate(-50%, -50%);
+  top: 50%;
+  width: 100vmin;
+  padding: 5vmin;
+  border-radius: 1.5vmin;
+  color: #fff;
+}
+
+.game {
+  height: 60vmin;
+  width: 60vmin;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5vmin 2vmin;
+  justify-content: center;
+  align-items: center;
+}
+
+.box {
+  height: 18vmin;
+  width: 18vmin;
+  background-color: #3a5a40;
+  border-radius: 1rem;
+  border: none;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+  font-size: 8vmin;
+  color: #dad7cd;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .reset-btn{
+  background-color: #344e41;
+  color: #dad7cd;
+  padding: 2vmin 8vmin;
+  border-radius: 0.3rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+} */
+.hide {
+  display: none;
+
+}
+
+.overlay:after {
+  background-color: #00000050;
+  position: absolute;
+  content: '';
+  left: 0px;
+  top: 0px;
+  height: 100%;
+  width: 100%;
+}
+
+#newgm {
+  border: none;
+  background-color: #dad7cd;
+  font-size: 20px;
+  padding: 10px 40px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transform: all 0.3s;
+  margin-top: 20px;
+  position: relative;
+}
+
+#msg {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+#newgm:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -5px;
+  left: -5px;
+  border-top: 2px solid #dad7cd;
+  border-left: 2px solid #dad7cd;
+  transition: all 0.25s;
+}
+
+#newgm:hover:before,
+#newgm:hover:after {
+  width: 104%;
+  height: 110%;
+}
+
+#newgm:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: -5px;
+  right: -5px;
+  border-bottom: 2px solid #dad7cd;
+  border-right: 2px solid #dad7cd;
+  transition: all 0.30s;
+}
+
+.reset-btn {
+  border: none;
+  background-color: #dad7cd;
+  font-size: 20px;
+  padding: 10px 40px;
+  text-transform: capitalize;
+  cursor: pointer;
+  transform: all 0.3s;
+  margin-top: 20px;
+  position: relative;
+  z-index: -1;
+}
+
+.reset-btn:before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  top: -5px;
+  left: -5px;
+  border-top: 2px solid #dad7cd;
+  border-left: 2px solid #dad7cd;
+  transition: all 0.25s;
+}
+
+.reset-btn:hover:before,
+.reset-btn:hover:after {
+  width: 104%;
+  height: 110%;
+}
+
+.reset-btn:after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  bottom: -5px;
+  right: -5px;
+  border-bottom: 2px solid #dad7cd;
+  border-right: 2px solid #dad7cd;
+  transition: all 0.30s;
+}
+
+@media (max-width:600px) {
+  .container {
+    height: auto;
+    margin: 50px 0px;
+  }
+}
