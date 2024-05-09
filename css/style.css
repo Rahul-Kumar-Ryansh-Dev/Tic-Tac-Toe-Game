@@ -40,6 +40,7 @@ h1.tic-tac-toe {
   padding: 5vmin;
   border-radius: 1.5vmin;
   color: #fff;
+  z-index: 3;
 }
 
 .game {
@@ -85,6 +86,7 @@ h1.tic-tac-toe {
   left: 0px;
   top: 0px;
   height: 100%;
+  z-index: 2;
   width: 100%;
 }
 
@@ -145,7 +147,7 @@ h1.tic-tac-toe {
   transform: all 0.3s;
   margin-top: 20px;
   position: relative;
-  z-index: -1;
+  z-index: 1;
 }
 
 .reset-btn:before {
